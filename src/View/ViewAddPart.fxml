@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="sceneAddPart" prefHeight="422.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ViewAddPart">
+   <children>
+      <Label layoutX="39.0" layoutY="44.0" text="Add Part">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="12.0" layoutY="119.0" text="ID" />
+      <Label layoutX="14.0" layoutY="158.0" text="Name" />
+      <Label layoutX="14.0" layoutY="189.0" text="Inventory" />
+      <Label layoutX="15.0" layoutY="226.0" text="Price/Cost" />
+      <Label layoutX="18.0" layoutY="261.0" text="Max" />
+      <Label fx:id="lblAddPartMachineID" layoutX="18.0" layoutY="302.0" text="Machine ID" />
+      <Label layoutX="326.0" layoutY="261.0" text="Min" />
+      <RadioButton fx:id="radBtnAddPartInHouse" layoutX="146.0" layoutY="49.0" mnemonicParsing="false" onMouseClicked="#radBtnInHouseSelect" selected="true" text="In-House" />
+      <RadioButton fx:id="radBtnAddPartOutsourced" layoutX="270.0" layoutY="49.0" mnemonicParsing="false" onMouseClicked="#radBtnOutsourcedSelect" text="Outsourced" />
+      <TextField fx:id="txtPartID" disable="true" layoutX="106.0" layoutY="115.0" text="Auto Gen- Disabled" />
+      <TextField fx:id="txtAddPartName" layoutX="106.0" layoutY="154.0" />
+      <TextField fx:id="txtAddPartInventory" layoutX="106.0" layoutY="185.0" text="0" />
+      <TextField fx:id="txtAddPartPrice" layoutX="106.0" layoutY="222.0" />
+      <TextField fx:id="txtAddPartMax" layoutX="106.0" layoutY="257.0" />
+      <TextField fx:id="txtAddPartMachineID" layoutX="107.0" layoutY="298.0" />
+      <TextField fx:id="txtAddPartMin" layoutX="360.0" layoutY="257.0" />
+      <Button fx:id="btnAddPartSave" layoutX="274.0" layoutY="351.0" mnemonicParsing="false" onMouseClicked="#btnAddPartSavePress" text="Save" />
+      <Button fx:id="btnAddPartCancel" layoutX="353.0" layoutY="351.0" mnemonicParsing="false" onMouseClicked="#btnAddPartCancelPress" text="Cancel" />
+      <Label fx:id="lblAddPartCompanyName" layoutX="11.0" layoutY="302.0" text="Company Name" visible="false" />
+      <TextField fx:id="txtAddPartCompany" disable="true" layoutX="106.0" layoutY="298.0" visible="false" />
+
+   </children>
+</AnchorPane>

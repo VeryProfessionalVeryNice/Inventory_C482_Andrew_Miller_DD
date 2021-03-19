@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="sceneModifyProduct" prefHeight="522.0" prefWidth="831.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ViewModifyProduct">
+   <children>
+      <AnchorPane layoutX="18.0" layoutY="13.0" prefHeight="496.0" prefWidth="796.0" style="-fx-border-color: black; -fx-border-radius: 20;">
+         <children>
+            <Label layoutX="169.0" layoutY="243.0" text="Min" />
+            <Label layoutX="36.0" layoutY="243.0" text="Max" />
+            <Label layoutX="36.0" layoutY="210.0" text="Price" />
+            <Label layoutX="36.0" layoutY="177.0" text="Inv" />
+            <Label layoutX="36.0" layoutY="140.0" text="Name" />
+            <Label layoutX="36.0" layoutY="102.0" text="ID" />
+            <Label layoutX="36.0" layoutY="30.0" text="Modify Product">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <TextField fx:id="txtModifyProductSearch" layoutX="595.0" layoutY="17.0" onKeyTyped="#txtModifyProductKeyPress" prefHeight="25.0" prefWidth="179.0" promptText="Search by Part ID or Name" />
+            <TableView fx:id="tblModifyPartAssociated" layoutX="363.0" layoutY="252.0" prefHeight="165.0" prefWidth="416.0">
+              <columns>
+                <TableColumn fx:id="colModifyProductAssocID" prefWidth="70.0" text="Part ID" />
+                <TableColumn fx:id="colModifyProductAssocName" prefWidth="131.0" text="Part Name" />
+                  <TableColumn fx:id="colModifyProductAssocInv" prefWidth="93.0" text="Inventory Level" />
+                  <TableColumn fx:id="colModifyProductAssocCost" prefWidth="121.0" text="Price/Cost Per Unit" />
+              </columns>
+            </TableView>
+            <TableView fx:id="tblModifyPartAll" layoutX="363.0" layoutY="47.0" prefHeight="165.0" prefWidth="416.0">
+              <columns>
+                <TableColumn fx:id="colModifyProductAllID" prefWidth="68.0" text="Part ID" />
+                <TableColumn fx:id="colModifyProductAllName" prefWidth="121.0" text="Part Name" />
+                  <TableColumn fx:id="colModifyProductAllInv" prefWidth="104.0" text="Inventory Level" />
+                  <TableColumn fx:id="colModifyProductAllCost" prefWidth="122.0" text="Price/Cost per Unit" />
+              </columns>
+            </TableView>
+            <Button fx:id="btnModifyProductRemove" layoutX="620.0" layoutY="422.0" mnemonicParsing="false" onMouseClicked="#btnModifyPartRemovePress" prefHeight="25.0" prefWidth="149.0" text="Remove Associated Part" />
+            <Button fx:id="btnModifyProductCancel" layoutX="717.0" layoutY="453.0" mnemonicParsing="false" onMouseClicked="#btnModifyProductCancelPress" text="Cancel" />
+            <Button fx:id="btnModifyProductSave" layoutX="620.0" layoutY="453.0" mnemonicParsing="false" onMouseClicked="#btnModifyProductSavePress" prefHeight="25.0" prefWidth="52.0" text="Save" />
+            <TextField fx:id="txtModifyProductID" disable="true" layoutX="79.0" layoutY="98.0" promptText="Not Modifiable" />
+            <TextField fx:id="txtModifyProductName" layoutX="79.0" layoutY="136.0" />
+            <TextField fx:id="txtModifyProductInv" layoutX="79.0" layoutY="173.0" prefHeight="25.0" prefWidth="65.0" />
+            <TextField fx:id="txtModifyProductPrice" layoutX="79.0" layoutY="206.0" prefHeight="25.0" prefWidth="65.0" />
+            <TextField fx:id="txtModifyProductMax" layoutX="79.0" layoutY="239.0" prefHeight="25.0" prefWidth="65.0" />
+            <TextField fx:id="txtModifyProductMin" layoutX="214.0" layoutY="239.0" prefHeight="25.0" prefWidth="73.0" />
+            <Button fx:id="btnModifyProductAdd" layoutX="685.0" layoutY="219.0" mnemonicParsing="false" onMouseClicked="#btnModifyPartAddPress" text="Add" />
+            <Label fx:id="lblPartSearch" layoutX="498.0" layoutY="21.0" text="No Part Found" textFill="RED" visible="false">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
